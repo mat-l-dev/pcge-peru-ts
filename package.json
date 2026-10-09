@@ -1,0 +1,53 @@
+{
+  "name": "pcge-peru-ts",
+  "version": "0.1.0",
+  "description": "Catálogos PCGE 2019 y 2026 para TypeScript, con trazabilidad y consulta de solo lectura.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "data",
+    "LICENSE",
+    "NOTICE",
+    "PROVENANCE.md",
+    "LICENSE-UNICODE",
+    "docs",
+    "scripts",
+    "schemas",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mat-l-dev/pcge-peru-ts.git"
+  },
+  "keywords": [
+    "pcge",
+    "peru",
+    "contabilidad",
+    "catalogo"
+  ],
+  "scripts": {
+    "test": "npm run build && node --test",
+    "check": "npm test",
+    "prepack": "npm run build",
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "typescript": "5.9.3",
+    "@types/node": "24.19.1"
+  },
+  "types": "./dist/index.d.ts"
+}
